@@ -47,3 +47,6 @@ export const updateInput = (current: Todo[], input: UpdateInput) => {
       return toggleTodo(current, input.title, input.done);
   }
 };
+
+export type FetchTodo = () => Promise<Todo[]>;
+export type SaveTodo = (todos: Todo[]) => Promise<void>;
