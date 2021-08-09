@@ -1,0 +1,38 @@
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+import { TextInput, TextForm } from ".";
+import { TextInputTemplate, TextFormTemplate } from "./stories";
+
+<Meta title="Components/Form" />
+
+# TextForm
+
+## Props
+
+<ArgsTable of={TextForm} />
+
+## Demo
+
+<Canvas>
+  <Story name="TextForm">{TextFormTemplate.bind({})}</Story>
+</Canvas>
+
+# TextInput
+
+## Props
+
+<ArgsTable of={TextInput} />
+
+## Demo
+
+<Canvas>
+  <Story
+    name="TexttInput"
+    args={{
+      text: "test",
+    }}
+  >
+    {TextInputTemplate.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="TexttInput" />

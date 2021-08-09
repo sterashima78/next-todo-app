@@ -1,0 +1,45 @@
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+import { TodoList, TodoItem } from ".";
+import { TodoTemplate, TodoListTemplate } from "./stories";
+
+<Meta title="Components/Todo" />
+
+# TodoList
+
+## Props
+
+<ArgsTable of={TodoList} />
+
+## Demo
+
+<Canvas>
+  <Story
+    name="TodoList"
+    args={{
+      todos: [
+        { title: "a", done: true },
+        { title: "b", description: "abc", done: false },
+      ],
+    }}
+  >
+    {TodoListTemplate.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="TodoList" />
+
+# TodoItem
+
+## Props
+
+<ArgsTable of={TodoItem} />
+
+## Demo
+
+<Canvas>
+  <Story name="TodoItem" args={{ title: "Hi!!", done: false }}>
+    {TodoTemplate.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="TodoItem" />

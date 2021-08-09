@@ -1,0 +1,10 @@
+.Todo {
+  list-style: none;
+  &Done {
+    text-decoration: line-through;
+  }
+  &Checkbox {
+    display: inline-block;
+    margin-right: 1em;
+  }
+}
